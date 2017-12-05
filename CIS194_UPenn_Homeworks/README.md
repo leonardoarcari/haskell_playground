@@ -5,7 +5,7 @@ held in the University of Pennsylvania (*Introduction to Haskell - Spring 2013*)
 [getOriginal :: IO (Github) -> IO (upenn.edu)](http://www.cis.upenn.edu/~cis194/spring13/lectures.html)
 
 ## Available solutions
-- [ ] Homework 1
+- [x] Homework 1
 	- [x] Validating Credit Card Numbers
 	- [x] Towers of Hanoii
 - [ ] Homework 2

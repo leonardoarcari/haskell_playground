@@ -34,7 +34,8 @@
 module CreditCardValidation (toDigits, toDigitsRev,
                              doubleEveryOther,
                              sumDigits,
-                             validate) where
+                             validate,
+                             main) where
 
 -- Reverse a list
 lrev :: [a] -> [a]
@@ -97,3 +98,9 @@ validate :: Integer -> Bool
 validate no = mod algNo 10 == 0 where
     algNo = sumDigits (doubleEveryOther digits)
     digits = toDigits no
+
+main :: IO()
+main = do {
+    putStrLn "Usage: validate <credit_card_no>";
+    putStrLn "Example: validate 4012888888881881";
+}

@@ -8,7 +8,8 @@ held in the University of Pennsylvania (*Introduction to Haskell - Spring 2013*)
 - [x] Homework 1
 	- [x] Validating Credit Card Numbers
 	- [x] Towers of Hanoii
-- [ ] Homework 2
+- [x] Homework 2
+	- [x] Something has gone terribly wrong!
 - [ ] Homework 3
 - [ ] Homework 4
 - [ ] Homework 5

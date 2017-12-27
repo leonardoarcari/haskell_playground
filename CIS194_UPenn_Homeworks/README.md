@@ -10,7 +10,8 @@ held in the University of Pennsylvania (*Introduction to Haskell - Spring 2013*)
 	- [x] Towers of Hanoii
 - [x] Homework 2
 	- [x] Something has gone terribly wrong!
-- [ ] Homework 3
+- [x] Homework 3
+	- [x] Code golf!
 - [ ] Homework 4
 - [ ] Homework 5
 - [ ] Homework 6

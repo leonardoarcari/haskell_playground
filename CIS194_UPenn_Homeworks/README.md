@@ -13,6 +13,11 @@ held in the University of Pennsylvania (*Introduction to Haskell - Spring 2013*)
 - [x] Homework 3
 	- [x] Code golf!
 - [ ] Homework 4
+	- [x] Wholemeal programming
+	- [x] Folding with trees
+	- [x] More folds!
+	- [ ] Implement foldl using foldr
+	- [ ] Finding primes
 - [ ] Homework 5
 - [ ] Homework 6
 - [ ] Homework 7

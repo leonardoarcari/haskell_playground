@@ -19,6 +19,9 @@ held in the University of Pennsylvania (*Introduction to Haskell - Spring 2013*)
 	- [ ] Implement foldl using foldr
 	- [ ] Finding primes
 - [ ] Homework 5
+	- [x] Expressions (*common*)
+	- [ ] Exercise 5
+	- [x] Exercise 6
 - [ ] Homework 6
 - [ ] Homework 7
 - [ ] Homework 8

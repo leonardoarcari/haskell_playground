@@ -26,6 +26,7 @@ held in the University of Pennsylvania (*Introduction to Haskell - Spring 2013*)
 - [ ] Homework 7
 - [ ] Homework 8
 - [ ] Homework 9
-- [ ] Homework 10
+- [x] Homework 10
+	- [x] Tools for building parsers
 - [ ] Homework 11
 - [ ] Homework 12

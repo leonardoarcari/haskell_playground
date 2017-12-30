@@ -28,5 +28,6 @@ held in the University of Pennsylvania (*Introduction to Haskell - Spring 2013*)
 - [ ] Homework 9
 - [x] Homework 10
 	- [x] Tools for building parsers
-- [ ] Homework 11
+- [x] Homework 11
+	- [x] Parsing S-expressions
 - [ ] Homework 12

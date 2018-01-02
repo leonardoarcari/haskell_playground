@@ -31,11 +31,16 @@ Consider the following code:
 
 #### Question no. 1
 Immediately after ```puzzle``` is invoked, the ```call/cc``` expression causes the creation of a continuation object named ```exit``` pointing right at the end of function ```puzzle```. After defining function ```local```, the execution procedes by evaluating ```(local 6)```. The ```call/cc``` within ```local``` causes the creation of a new continuation object named ```local-exit``` pointing right before the evaluation of the expression ```(exit 2)```. Execution procedes by evaluating the ```exit``` object with expression ```e1 = (print+sub e ...)```.
-My speculation here is that the address of the ```exit``` object is pushed on the execution stack at this very moment; the purpose of this comment will become clear later.
+
+*My speculation here is that the address of the ```exit``` object is pushed on the execution stack at this very moment; the purpose of this comment will become clear later.*
+
 So we need to evaluate expression ```e1``` which require us to evaluate first ```e``` and ```e2 = (call/cc (lambda (new exit) ...))```. The evaluation of ```call/cc``` in ```e2``` creates a new continuation object named ```new-exit``` pointing within the evaluation of ```(print+sub e e2)```. 
+
 Going with the evaluation of ```e2``` we set varibale ```exit``` to ```new-exit``` so now ```exit``` and ```new-exit``` point to the same continuation (i.e.: within the evaluation of ```(print+sub e e2)```).
 Then we evaluate ```(local-exit #f)```. This causes the stack to be replaced with the continuation object pointed by ```local-exit```, that is the evaluation of ```(exit 2)```. But now ```exit``` points to the same continuation of ```new-exit``` causing the evaluation of ```(print+sub e 2)```.
+
 The evaluation prints on stdout the value of ```e``` and ```" 2 -> "```, returning the result of ```e - 2```. At this point we can evaluate the expression ```(exit e1)``` with ```e1 = e - 2```. At first glance, you might think that because ```exit``` was set to ```new-exit``` we replace the current continuation with the one pointed by ```new-exit```, causing again the evaluation of ```print+sub``` and looping over and over.
+
 Although, because of what I speculated above, the address where to jump after evaluating ```exit``` is already set on the execution stack, so it points to the original continuation, i.e. at the end of function ```puzzle```. So eventually, the evaluation of ```puzzle``` returns ```e - 2 ```.
 
 #### Question no. 2

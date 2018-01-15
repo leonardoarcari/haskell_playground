@@ -8,7 +8,7 @@
 ; is the list ‘(2 3 4 2 4 6).
 
 (define (<*> fList vList)
-  (flatten
+  (apply append
    (map
     (lambda (f)
       (map f vList))
